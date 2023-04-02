@@ -1,0 +1,47 @@
+ class Convert {
+
+ public static void main(String[] args) {
+ 
+ // 1st METHOD
+  String name = "Rahul Sharma";
+  String nam = "RAHUL";
+  
+  String money = "        111             "; // USING TRIM() METHOD
+  
+  String word = "Hi rahul"; // USE THE charAt() method;
+  
+  int number = 123456;
+  
+  // change the pointer of the reference object 
+
+ 
+  System.out.println(name.toUpperCase());
+
+
+  System.out.println(nam.toLowerCase());
+  
+  
+  // 2nd METHOD
+  
+  System.out.println(money.trim());
+  
+  
+  // 3rd METHOD
+  
+  System.out.println(name.startsWith("Ra"));
+  System.out.println(name.endsWith("a"));
+  
+  
+  // 4th METHOD
+  
+  System.out.println(word.charAt(7));
+  
+  // 5th METHOD
+  
+  String no = String.valueOf(number);
+  
+  System.out.println(no);
+  
+ }
+
+}
