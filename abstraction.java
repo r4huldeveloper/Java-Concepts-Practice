@@ -1,6 +1,17 @@
 abstract class FirstWord {
    abstract void say();
    abstract int getRateOfInterest();
+   
+   // HERE I CREATED THE CONSTRUCTOR WHICH WILL INVOKED AT FIRST
+   FirstWord(){
+   System.out.println("Please say something");
+   }
+   void EatPapa(){
+   System.out.println("Please eat something Papa ");
+   }
+   void EatMummy(){
+   System.out.println("Please eat something maa");
+   }
 }
 
 class Girl extends FirstWord {
@@ -15,6 +26,7 @@ class Girl extends FirstWord {
    }
 }   
    class Boy extends FirstWord {
+   static String n = "papa";
    void say() {
    System.out.println("Hello Papa");
    }
@@ -33,9 +45,11 @@ class Speak{
   FirstWord fw1 = new Boy();
   
   fw.say();
+  fw.EatPapa();
     System.out.println("The interest for you is: "+fw.getRateOfInterest()+"%");
   fw1.say();
     System.out.println("The interest for you is: "+fw1.getRateOfInterest()+"%");
+    fw1.EatMummy();
 
   }
 
