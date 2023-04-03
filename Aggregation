@@ -1,0 +1,28 @@
+// WE HAVE TO FIND THE AREA OF CIRCLE WITH THE HELP OF HAS-A RELATIONSHIP
+// SO WE NEED to find Radius(i.e. n) and PI=3.14
+
+
+class Operation{
+ int square(int n){
+   return n*n;
+ }
+}
+
+class Circle{
+ double pi = 3.14;
+ Operation op; // aggregation
+ 
+ double area(int radius){
+  op = new Operation();
+  
+  int rsquare = op.square(radius); // code reusability(delegates the method call)
+  return pi * rsquare;
+}
+
+public static void main(String[] args){
+
+Circle c = new Circle();
+System.out.println(c.area(5));
+
+ }
+}
