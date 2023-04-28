@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    
-
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Trail: 2D Graphics (The Java&trade; Tutorials)</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="This 2d Java tutorial describes 2d graphics, geometry, text APIs, images, printing, advanced 2d topics" />
-        <meta name="keywords" content="java programming, learn java, java sample code, java 2d, geometry, font, graphics, images" />
-<style type="text/css">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+	<title>The Java&trade; Tutorials</title>
+	<meta name="Description" content="Tutorials and reference guides for the Java Programming Language" />
+	<meta name="keywords" content="java programming, learn java, java examples, java sample code, getting started with java" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">		/*
+<![CDATA[*/
     body {
         margin-left:10px;
         margin-right:10px;
@@ -21,11 +19,7 @@
     a:link{text-decoration:none; color:#09569d;}
     a:visited{text-decoration:none; color: #3a87cf;}
     a:hover{text-decoration:underline; }
-        
-    code{
-        font-family:Monaco,Courier,"Courier New";
-    }
-    
+               
     .header-container {
         background-color: #fff;
         border-bottom: 1px solid #C1CFDA;
@@ -56,7 +50,7 @@
     
     #logocover {
         display: block;
-        background: transparent url(../images/oracle-java-logo.png) 0px 0px no-repeat;
+        background: transparent url(images/oracle-java-logo.png) 0px 0px no-repeat;
         height: 50px;
         width: 229px;
         float: left;
@@ -72,12 +66,6 @@
         width: 340px;
     }
 
-
-    .FigureCaption   { 
-        font-family: sans-serif; 
-        text-align: center;
-    }
-    
     #TopBar_bl {        
         width: 100%;
         height: 60px;
@@ -88,7 +76,7 @@
     }
     #TopBar_tl {
         margin-left: -110px;
-        margin-right: -100px;       
+        margin-right: -100px;    
 		align: left;
         height: 60px;
     }
@@ -132,6 +120,18 @@
         color: #333;
     }
     
+    @media print {
+        div#TopBar_left {
+            margin-left: 0;
+        }
+    }
+
+    @media print {
+        div#TopBar_right {
+            display: none;
+        }
+    }
+    
     #TopBar_right {
         line-height: 12px;
         float: right;
@@ -140,67 +140,12 @@
         text-align: left;
     }
     
-
-    @media print {
-        #BreadCrumbs, #Download {
-            display: none;
-        }
-    }
-    
-     
-    @media print {
-        #TopBar_right {
-            display: none;
-        }
-    }
     #TopBar_right a {
-        font-size: 10px;
+        font-size: 12px;
         margin: 3px;
         padding: 0;
     }
- 
-    #BreadCrumbs {
-        padding: 15px 5px 0.5em 0;
-        font-family: sans-serif; 
-        float: right;
-    }
-    
-    #BreadCrumbs a {
-        color:#09569d;
-    }
-    
-    #BreadCrumbs a:visited, #BreadCrumbs a:link {
-        text-decoration: none;
-    }
-    
-    #BreadCrumbs a:hover, #BreadCrumbs a:active {
-        text-decoration: underline;
-    }
-    
-    #PageTitle {
-        margin: 0 5px 0.5em 0;
-        color: #F90000;
-    }
-    
-    #PageContent{
-        margin: 0 5px 0 20px;
-    }
-    
-    .LeftBar_shown {
-        width: 13em;
-        float: left;
-    }
-    
-    @media print {
-        .LeftBar_shown {
-            display: none;
-        }
-    }
-    
-    .LeftBar_hidden {
-        display: none;
-    }
-    
+
     #Footer {
         padding-top: 10px;
         padding-left: 10px;
@@ -212,106 +157,63 @@
         font-family: sans-serif; 
         margin-top: 1px;
     }
-
-    .NavBit  {
-        padding: 15px 5px 0.5em 0;
+    
+    div#TutBody {
+        margin: 10px 20em 10px 3em;
+    }
+    div.RightBar {
         font-family: sans-serif; 
+        float: right;
     }
-    
-    @media print {
-        .NavBit {
-            display: none;
-        }
+    div.RightBar img {
+        margin: 0 0 1em 0;
     }
-    
-    #TagNotes {
-        text-align: right;        
+    div.RightBox {
+        margin: 10px 3em 10px 0;
+        width: 15em;
+        border-style: double;
     }
-    
-    @media print {
-        #TagNotes a:visited, #TagNotes a:link {
-            color: #35556B;
-            text-decoration: none;
-        }
+    div.BlueRightBox {
+        margin: 10px 3em 10px 0;
+        width: 15em;
+        border-style: double;
+        background:#efefef; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmVmZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e2eff9 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2eff9)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e2eff9 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#e2eff9 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2eff9',GradientType=0 ); /* IE6-8 */
+        
     }
-    
-    #Contents a, .NavBit a, #TagNotes a {
-        color:#09569d;
+    div.Pad {
+        font-size: 80%;
+        padding: 1em;
     }
-    
-    #TagNotes a:visited, #TagNotes a:link,
-    #Contents a:visited, #Contents a:link,
-    .NavBit a:visited, .NavBit a:link {
+    div.Pad h2 {
+        text-align: center;
+        margin: 0;
+    }
+    div.Pad div {
+        display: list-item;
+        list-style-image: url(images/arrow-right-gray.gif);
+        margin: 0.3em 1em;
+    }
+    ul.BlueArrows {
+        list-style-image: url(images/ar_dbl_blue.gif);
+    }
+    ul.BlueArrows a:visited, ul.BlueArrows a:link {
         text-decoration: none;
     }
-    
-    #TagNotes a:hover, #TagNotes a:active,   
-    #Contents a:hover, #Contents a:active,   
-    .NavBit a:hover, .NavBit a:active {  
+    ul.BlueArrows a:hover, ul.BlueArrows a:active {
         text-decoration: underline;
     }
-    
-    #Contents {
-        float: left;
-        font-family: sans-serif; 
-    }
-    @media print {
-        #Contents {
-            display: none;
-        }
-    }
-    @media screen {
-        div.PrintHeaders {
-            display: none;
-        }
-    }
-    .linkLESSON, .nolinkLESSON {
-        margin-left: 0.5em;
-        text-indent: -0.5em;
-    }
-    .linkAHEAD, .nolinkAHEAD, .linkQUESTIONS, .nolinkQUESTIONS   {
-        margin-left: 1.5em; 
-        text-indent: -0.5em
-    }
-    .linkBHEAD, .nolinkBHEAD   {
-        margin-left: 2.5em;
-        text-indent: -0.5em
-    }
-    .linkCHEAD, .nolinkCHEAD   {
-        margin-left: 3.5em;
-        text-indent: -0.5em
-    }
-    .nolinkLESSON, .nolinkAHEAD, .nolinkBHEAD, .nolinkCHEAD,
-    .nolinkQUESTIONS {
-        font-weight: bold;
+     h1, h2, h3, h4, h5 {
         color: #333;
-		
-		
-    }
-    .MainFlow_indented {
-        margin-right: 10px;
-        margin-left: 15em;
-        margin-bottom: 2em;
-
-    }
-    .MainFlow_wide {
-	
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 2em;
-
-    }
-    @media print {
-        .MainFlow_indented, .MainFlow_wide {
-            padding-top: 0;
-            margin-top: 10px;
-            margin-right: 10px;
-            margin-left: 0;
-        }
-    }
-    h1, h2, h3, h4, h5 {
-        color: #333;
-        
+        font-family: sans-serif;
     }
 
     h1 {
@@ -337,105 +239,207 @@
         font-size: 12px;
     }
 
-
-    #ToggleLeft {
-        display: none;
-    }
-    
-    .note {
-        margin: 0 30px 0px 30px;
-    }
-    
-    .codeblock {
-        margin: 0 30px 0px 30px;
-		font-size:12px;
-		font-family:Monaco,Courier,"Courier New";
-    }
-    
-    .tocli {
-        list-style-type:none;
-    }
-
-    .betadraft {
-        color: red;
-    }
-
-</style>
-    </head>
+/*]]>		*/
+	</style>
+</head>
 <body>
-    <noscript>
-        A browser with JavaScript enabled is required for this page to operate properly.
-    </noscript>
-        <!-- trailheader -->
-     <div class="header-container">
-        <div class="bookwrapper  clearfix">       
-            <div id="brandProdName">
-                <div id="logocover"></div>
-                <div id="productName" >Documentation</div>
-            </div> 
-            <br class="clearfloat" />
-        </div>
-    </div>
-    
-    <div id="TopBar">
-     <div id="TopBar_tr"> <div id="TopBar_tl"> <div id="TopBar_br"> <div id="TopBar_bl"> 
-                    <div id="TopBar_left">
-                        The Java&trade; Tutorials
-                    </div>
-                    <div id="TopBar_right">
-<script type="text/javascript">function search() { var sform = document.getElementById("searchForm"); var srchelem = document.getElementById("searchField"); var srchelemreal = document.getElementById("keywordreal"); var srchval = srchelem.value; if (srchval.length == 0) { return false; } srchelemreal.value = srchval; sform.action = "http://docs.oracle.com/apps/search/search.jsp"; sform.method = "get"; sform.target = "_blank"; sform.submit(); }</script><form id="searchForm" onsubmit="return search()"><input type="hidden" name="category" value="java"/><input type="hidden" name="product" value="e25407-01"/><input type="hidden" name="q" value="" id="keywordreal"/><label for="searchField"><input type="text" id="searchField" size="30" onclick="this.value='';" /></label><input type="submit" value="Search" /></form>                    
-                    </div> 
-                </div> </div> </div> </div> </div>
+<noscript>
+	A browser with JavaScript enabled is required for this page to operate properly.
+</noscript>
+<div class="header-container">
+	<div class="bookwrapper  clearfix">
+		<div id="brandProdName">
+			<div id="logocover">
+			</div>
+			<div id="productName">
+				Documentation
+			</div>
+		</div>
+		<br class="clearfloat" />
+	</div>
+</div>
+<div id="TopBar">
+	<div id="TopBar_tr">
+		<div id="TopBar_tl">
+			<div id="TopBar_br">
+				<div id="TopBar_bl">
+					<div id="TopBar_left">
+						The Java&trade; Tutorials
+					</div>
+					<div id="TopBar_right">
+						<script type="text/javascript">
+							function search() {
+							  var sform = document.getElementById("searchForm");
+							  var srchelem = document.getElementById("searchField");
+							  var srchelemreal = document.getElementById("keywordreal");
+							  var srchval = srchelem.value;
+							  if (srchval.length == 0) {
+							    return false;
+							  }
+							  srchelemreal.value = srchval;
+							  sform.action = "http://docs.oracle.com/apps/search/search.jsp";
+							  sform.method = "get";
+							  sform.target = "_blank";
+							  sform.submit();
+							}
+						</script>
+						<form id="searchForm" onsubmit="return search()">
+							<input type="hidden" name="category" value="java" />
+							<input type="hidden" name="product" value="e25407-01" />
+							<input type="hidden" name="q" value="" id="keywordreal" />
+							<label for="searchField"> 
+							<input type="text" id="searchField" size="30" onclick="this.value='';" />
+							</label> 
+							<input type="submit" value="Search" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="RightBar">
+	<img src="images/ThinkingDuke.png" width="124" height="128" align="middle" alt="Duke thinking about what to study" style="margin-top:2px" /><br />
+	Not sure where to start?<br />
+	See <a href="tutorialLearningPaths.html">Learning Paths</a> 
+	<div class="BlueRightBox">
+		<center>
+			<h2>
+				Tutorial Contents
+			</h2>
+		</center>
+		<div>
+			<center>
+				<a href="reallybigindex.html"><img src="images/really_big_index_button.gif" width="108" height="22" align="middle" alt="really big index button" /></a>
+			</center>
+		</div>
+	</div>
+	<div class="RightBox">
+		<div class="Pad">
+			<h2>
+				Tutorial Resources
+			</h2>
+			<div>
+				Last Updated <a href="information/history.html">2022-03-04</a>
+			</div>
+			<div>
+				<a href="https://blogs.oracle.com/thejavatutorials/">The Java Tutorials' Blog</a> has news and updates about the Java SE tutorials.
+			</div>
+			<div>
+				<a href="http://www.oracle.com/technetwork/java/javase/java-tutorial-downloads-2005894.html"> Download the latest Java Tutorials bundle</a>.
+			</div>
+		</div>
+	</div>
+	<div class="RightBox">
+		<div class="Pad">
+			<h2>
+				In Book Form
+			</h2>
+			<div>
+				<i>The Java Tutorial, Sixth Edition.</i> <a href="http://www.amazon.com/The-Java-Tutorial-Course-Edition/dp/0134034082" target="_blank">Amazon.com</a>.
+			</div>
+		</div>
+	</div>
+	<div class="RightBox">
+		<div class="Pad">
+			<h2>
+				Other Resources
+			</h2>
+			<div>
+				<a href="https://docs.oracle.com/javase/8/docs/">Java SE 8 Developer Guides</a>
+			</div>
+			<div>
+				<a href="https://docs.oracle.com/javase/8/docs/api">JDK 8 API Documentation</a>
+			</div>
+		</div>
+	</div>
+	<div class="RightBox">
+		<div class="Pad">
+			<h2>
+				Oracle Training and Professional Certification
+			</h2>
+			<div>
+				<a href="http://education.oracle.com/pls/web_prod-plq-dad/ou_product_category.getFamilyPage?p_family_id=48"> Java Certification and Training</a>
+			</div>
+			<div>
+				<a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=3"> Oracle University</a>
+			</div>
+		</div>
+	</div>
+	<div class="RightBox">
+		<div class="Pad">
+			<h2>
+				Software
+			</h2>
+			<div>
+				The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"> Java Development Kit</a> (JDK)
+			</div>
+<!-- <div><a href="https://netbeans.org/">NetBeans IDE</a></div> -->
+<!--
 
-    <div class="MainFlow_wide">
-        <div id="BreadCrumbs">
-            <a href="../index.html" target="_top">Home Page</a>
-        </div>
-        <div class="NavBit">
-            <a href="../index.html">&laquo; Previous</a>
-            &bull;
-            <a href="./TOC.html">Trail</a>
-            &bull;
-            <a href="./overview/index.html">Next &raquo;</a>
-        </div>
-        <div class="Banner"><p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases and might use technology no longer available.<br/>See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java Language Changes</a> for a summary of updated language features in Java SE 9 and subsequent releases.<br/>See <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK Release Notes</a> for information about new features, enhancements, and removed or deprecated options for all JDK releases.</p></div>
-        <div id="PageTitle"><h1>Trail: 2D Graphics</h1></div>
-        <div id="PageContent">
+<div><a href=
+"http://www.oracle.com/technetwork/java/javaee/downloads/index.html">
+Java EE SDK</a></div>
 
-<p>This trail introduces you to the Java 2D&trade; API and shows you how to display and print 2D graphics in your Java programs. The trail is intended for developers who want to enrich their knowledge of the Java 2D API, as well as for beginners in computer graphics. Almost every section contains relevant examples to illustrate specific capabilities. The Java 2D API enables you to easily perform the following tasks:</p>
-<ul>
-<li>Draw lines, rectangles and any other geometric shape.</li>
-<li>Fill those shapes with solid colors or gradients and textures.</li>
-<li>Draw text with options for fine control over the font and rendering process.</li>
-<li>Draw images, optionally applying filtering operations.</li>
-<li>Apply operations such as compositing and transforming during any of the above rendering operations.</li>
-</ul>
-<p>This chapter also explains less familiar concepts such as compositing.</p>
-<center><img src="../figures/2d/2D-1.gif" width="410" height="102" align="bottom" alt="This figure represents different graphics capabilities" /></center><em class="Emphasis">Using 2D Graphics API to display complex charts</em><br />
-<center><img src="../figures/2d/2D-2.gif" width="323" height="72" align="bottom" alt="This figure represents the using of filtering operation" /></center><em class="Emphasis">Using image-filtering operations</em><br />
-<p>This chapter describes the concept of drawing on-screen and off-screen images, as well as surfaces and printer devices. This trail covers the most common uses of the Java 2D APIs and briefly describes some of the more advanced features.</p>
-<p><a href="overview/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <b>Overview of the Java 2D Graphics API</b></a> introduces the key Java 2D concepts and describes the Java 2D rendering model. This lesson is more conceptual than other lessons of this trail, it enables you to get deep into basic notions and classes descriptions.</p>
-<p><a href="basic2d/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <b>Getting started with Graphics</b></a> uses a developed example to show you how to obtain a Graphics object and use it for common graphics rendering tasks.</p>
-<p><a href="geometry/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <b>Working with Geometry</b></a> teaches you how to use APIs to draw graphic primitives and arbitrary shapes, and how to apply fancy strokes and fill styles.</p>
-<p><a href="text/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <strong>Working with Text APIs</strong></a> shows you how to effectively use text APIs, including how to create a <code>Font</code> object with desired attributes, measure text, and determine the names of the fonts available on your system.</p>
-<p><a href="images/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <b>Working with Images</b></a> explains how to create a BufferedImage object, perform image-filtering operations, and draw on an image.</p>
-<p><a href="printing/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <b>Printing</b></a> teaches you how to render 2D graphics to a printer, print complex documents, and use Print Services.</p>
-<p><a href="advanced/index.html"><img src="../images/coreIcon.gif" alt="Trail icon" align="left" width="20" height="20" border="0" /> <b>Advanced topics in Java 2D</b></a> explains how to perform transformations, clip the drawing region, composite overlapping graphics, specify rendering preferences, and control rendering quality.</p>
-
-
-        </div>
-    <div class="NavBit">
-        <a href="../index.html">&laquo; Previous</a>
-        &bull;
-        <a href="./TOC.html">TOC</a>
-        &bull;
-        <a href="./overview/index.html">Next &raquo;</a>
-
-    </div>
-    </div>
-    
-<hr class="clearfloat"/>
-
+-->
+		</div>
+	</div>
+</div>
+<div id="TutBody">
+	<p style="background-color: rgb(247, 248, 249); border-width: 1px; padding: 10px; font-style: italic; border-style: solid; border-color: rgb(64, 74, 91);">
+		The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases and might use technology no longer available.<br />
+		See <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/java/javase&id=java_language_changes">Java Language Changes</a> for a summary of updated language features in Java SE 9 and subsequent releases.<br />
+		See <a href="https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html">JDK Release Notes</a> for information about new features, enhancements, and removed or deprecated options for all JDK releases.
+	</p>
+	<p>
+		The Java Tutorials are practical guides for programmers who want to use the Java programming language to create applications. They include hundreds of complete, working examples, and dozens of lessons. Groups of related lessons are organized into "trails".
+	</p>
+	<h2>
+		Trails Covering the Basics
+	</h2>
+	These trails are available in book form as <i>The Java Tutorial, Sixth Edition</i>. To buy this book, refer to the box to the right. 
+	<ul class="BlueArrows">
+		<li><a href="getStarted/index.html">Getting Started</a> &mdash; An introduction to Java technology and lessons on installing Java development software and using it to create a simple program.</li>
+		<li><a href="java/index.html">Learning the Java Language</a> &mdash; Lessons describing the essential concepts and features of the Java Programming Language.</li>
+		<li><a href="essential/index.html">Essential Java Classes</a> &mdash; Lessons on exceptions, basic input/output, concurrency, regular expressions, and the platform environment.</li>
+		<li><a href="collections/index.html">Collections</a> &mdash; Lessons on using and extending the Java Collections Framework.</li>
+		<li><a href="datetime/index.html">Date-Time APIs</a> &mdash; How to use the <tt>java.time</tt> pages to write date and time code.</li>
+		<li><a href="deployment/index.html">Deployment</a> &mdash; How to package applications and applets using JAR files, and deploy them using Java Web Start and Java Plug-in.</li>
+		<li><a href="extra/certification/index.html">Preparation for Java Programming Language Certification</a> &mdash; List of available training and tutorial resources.</li>
+	</ul>
+	<h2>
+		Creating Graphical User Interfaces
+	</h2>
+	<ul class="BlueArrows">
+		<li><a href="uiswing/index.html">Creating a GUI with Swing</a> &mdash; A comprehensive introduction to GUI creation on the Java platform.</li>
+		<li><a href="https://docs.oracle.com/javafx/index.html">Creating a JavaFX GUI</a> &mdash; A collection of JavaFX tutorials.</li>
+	</ul>
+	<h2>
+		Specialized Trails and Lessons
+	</h2>
+	<p>
+		These trails and lessons are only available as web pages.
+	</p>
+	<ul class="BlueArrows">
+		<li><a href="networking/index.html">Custom Networking</a> &mdash; An introduction to the Java platform's powerful networking features.</li>
+		<li><a href="ext/index.html">The Extension Mechanism</a> &mdash; How to make custom APIs available to all applications running on the Java platform.</li>
+		<li><a href="extra/fullscreen/index.html">Full-Screen Exclusive Mode API</a> &mdash; How to write applications that more fully utilize the user's graphics hardware.</li>
+		<li><a href="extra/generics/index.html">Generics</a> &mdash; An enhancement to the type system that supports operations on objects of various types while providing compile-time type safety. Note that this lesson is for advanced users. The <a href="java/index.html">Java Language</a> trail contains a <a href="java/generics/index.html">Generics</a> lesson that is suitable for beginners.</li>
+		<li><a href="i18n/index.html">Internationalization</a> &mdash; An introduction to designing software so that it can be easily adapted (localized) to various languages and regions.</li>
+		<li><a href="javabeans/index.html">JavaBeans</a> &mdash; The Java platform's component technology.</li>
+		<li><a href="jaxb/index.html">JAXB</a> &mdash; Introduces the Java architecture for XML Binding (JAXB) technology.</li>
+		<li><a href="jaxp/index.html">JAXP</a> &mdash; Introduces the Java API for XML Processing (JAXP) technology.</li>
+		<li><a href="jdbc/index.html">JDBC Database Access</a> &mdash; Introduces an API for connectivity between the Java applications and a wide range of databases and data sources.</li>
+		<li><a href="jmx/index.html">JMX</a>&mdash; Java Management Extensions provides a standard way of managing resources such as applications, devices, and services.</li>
+		<li><a href="jndi/index.html">JNDI</a>&mdash; Java Naming and Directory Interface enables accessing the Naming and Directory Service such as DNS and LDAP.</li>
+		<li><a href="reflect/index.html">Reflection</a> &mdash; An API that represents ("reflects") the classes, interfaces, and objects in the current Java Virtual Machine.</li>
+		<li><a href="rmi/index.html">RMI</a> &mdash; The Remote Method Invocation API allows an object to invoke methods of an object running on another Java Virtual Machine.</li>
+		<li><a href="security/index.html">Security</a> &mdash; Java platform features that help protect applications from malicious software.</li>		
+		<li><a href="sdp/index.html">Sockets Direct Protocol</a> &mdash; How to enable the Sockets Direct Protocol to take advantage of InfiniBand.</li><li><a href="sound/index.html">Sound</a> &mdash; An API for playing sound data from applications.</li>
+		<li><a href="2d/index.html">2D Graphics</a> &mdash; How to display and print 2D graphics in applications.</li>
+	</ul>
+</div>
+<hr />
 <div id="Footer">
 
 <p class="footertext">
@@ -445,13 +449,9 @@
 <a href="https://www.oracle.com/legal/terms.html">Terms of Use</a> |
 <a href="https://www.oracle.com/legal/privacy/">Your Privacy Rights</a></p>
 
-<p class="footertext"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
+<p class="footertext"><a href="https://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en-US">
 Copyright &copy; 1995, 2022 Oracle and/or its affiliates. All rights reserved.</a></p>
        
-</div>    
-    <div class="PrintHeaders">
-        <b>Previous page:</b> Beginning of Tutorial
-        <br /><b>Next page:</b> Overview of the Java 2D API Concepts
-    </div>
+</div>
 </body>
-</html> 
+</html>
