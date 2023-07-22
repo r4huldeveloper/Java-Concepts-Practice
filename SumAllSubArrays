@@ -1,0 +1,13 @@
+var arraySum = function(numbers) {
+  var sums = [];
+  var sum = 0;
+  //write your code here 
+  for(var i = 0; i < numbers.length; i++){
+    for(var j = 0; j < numbers[i].length; j++){
+      sum += numbers[i][j];
+    }
+      sums[i] = sum;
+      sum = 0;
+  }
+  return sums;
+}
