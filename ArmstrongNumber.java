@@ -1,32 +1,35 @@
-public class ArmstrongNumber {
-
-   public static void main (String[] args)
-   {
-        int num = 1634;
-        int digit = 0;
-        int temp = num;
-        int sum=0;
-
+public class MyClass {
+    static boolean isArmstrong(int n){
+        int temp = 0, last = 0, digit=0, sum = 0;
+        
+        temp = n;
         while(temp > 0){
             temp /= 10;
             digit++;
         }
-     
-        temp = num;
+        temp = n;
+        
         while(temp > 0){
-            int last = temp%10;
-            sum += (int)(Math.pow(last, digit));
-            temp = temp/10;
+            last = temp % 10;
+            sum += Math.pow(last,digit);
+            temp /= 10;
         }
-     
-        if(num == sum)
-        {
-            System.out.println("True");
+        
+        // check if number is armstrong
+        if(n == sum){
+            return true;
+            
         }
-     
-        else
-        { 
-            System.out.println("False");
+        else{
+            return false;
         }
-    }  
+        
+    }
+    public static void main(String[] args){
+        int num = 200;
+        for(int i = 0; i < num; i++){
+            if(isArmstrong(i))
+              System.out.println(i);
+        }
+    }
 }
